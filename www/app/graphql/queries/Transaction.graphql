@@ -1,0 +1,13 @@
+mutation AddTransaction($object: Transaction_insert_input!) {
+  insert_Transaction_one(object: $object) {
+    id
+  }
+}
+
+query GetTransactionTypes {
+  TransactionType {
+    id
+    name
+    description
+  }
+}

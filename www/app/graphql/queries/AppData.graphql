@@ -1,0 +1,100 @@
+query GetBrands {
+  Brand {
+    id
+    name
+  }
+}
+
+query GetCategories {
+  Category {
+    id
+    name
+  }
+}
+
+query GetCities {
+  City {
+    countryId
+    id
+    name
+    stateId
+  }
+}
+
+query GetCountries {
+  Country {
+    id
+    name
+  }
+}
+
+# query has to include pattern characters, like % or _ for the _ilike operator to work
+query SearchCountries($query: String, $limit: Int = 10) {
+  Country(
+    limit: $limit
+    order_by: { name: asc }
+    where: { name: { _ilike: $query } }
+  ) {
+    id
+    name
+  }
+}
+
+query GetColors {
+  Color {
+    id
+    name
+    hexCode
+  }
+}
+
+query GetConditions {
+  Condition {
+    id
+    name
+    description
+  }
+}
+
+query States {
+  State {
+    id
+    name
+    countryId
+    abbreviation
+  }
+}
+
+query GetCurrencies {
+  Currency {
+    id
+    isoCode
+    name
+    symbol
+    displayOrder
+  }
+}
+
+query GetSizes {
+  Size {
+    unit
+    value
+    id
+    description
+    name
+  }
+}
+
+query GetSubcategories {
+  Subcategory {
+    id
+    name
+    categoryId
+    parentSubcategoryId
+    SizeSubcategories {
+      id
+      sizeId
+      subcategoryId
+    }
+  }
+}
