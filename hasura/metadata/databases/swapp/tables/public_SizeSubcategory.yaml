@@ -1,0 +1,17 @@
+table:
+  name: SizeSubcategory
+  schema: public
+configuration:
+  column_config:
+    size_id:
+      custom_name: sizeId
+    subcategory_id:
+      custom_name: subcategoryId
+  custom_column_names:
+    size_id: sizeId
+    subcategory_id: subcategoryId
+  custom_root_fields: {}
+object_relationships:
+  - name: Subcategory
+    using:
+      foreign_key_constraint_on: subcategory_id

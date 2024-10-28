@@ -1,0 +1,11 @@
+table:
+  name: Tag
+  schema: public
+array_relationships:
+  - name: TagItems
+    using:
+      foreign_key_constraint_on:
+        column: tag_id
+        table:
+          name: ItemTag
+          schema: public

@@ -1,0 +1,19 @@
+table:
+  name: City
+  schema: public
+configuration:
+  column_config:
+    country_id:
+      custom_name: countryId
+    state_id:
+      custom_name: stateId
+  custom_column_names:
+    country_id: countryId
+    state_id: stateId
+  custom_root_fields: {}
+select_permissions:
+  - role: user
+    permission:
+      columns: []
+      filter: {}
+    comment: ""

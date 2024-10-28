@@ -1,0 +1,67 @@
+table:
+  name: Transaction
+  schema: public
+configuration:
+  column_config:
+    available_until:
+      custom_name: availableUntil
+    completed_at:
+      custom_name: completedAt
+    created_at:
+      custom_name: createdAt
+    currency_id:
+      custom_name: currencyId
+    extra_pay_max_amount:
+      custom_name: extraPayMaxAmount
+    extra_receive_max_amount:
+      custom_name: extraReceiveMaxAmount
+    is_completed:
+      custom_name: isCompleted
+    offered_item_id:
+      custom_name: offeredItemId
+    swap_for_any_item:
+      custom_name: swapForAnyItem
+    swap_only_for_provided_wanted_items:
+      custom_name: swapOnlyForProvidedWantedItems
+    transaction_type_id:
+      custom_name: transactionTypeId
+    updated_at:
+      custom_name: updatedAt
+    user_id:
+      custom_name: userId
+    will_pay_extra:
+      custom_name: willPayExtra
+    will_receive_extra:
+      custom_name: willReceiveExtra
+  custom_column_names:
+    available_until: availableUntil
+    completed_at: completedAt
+    created_at: createdAt
+    currency_id: currencyId
+    extra_pay_max_amount: extraPayMaxAmount
+    extra_receive_max_amount: extraReceiveMaxAmount
+    is_completed: isCompleted
+    offered_item_id: offeredItemId
+    swap_for_any_item: swapForAnyItem
+    swap_only_for_provided_wanted_items: swapOnlyForProvidedWantedItems
+    transaction_type_id: transactionTypeId
+    updated_at: updatedAt
+    user_id: userId
+    will_pay_extra: willPayExtra
+    will_receive_extra: willReceiveExtra
+  custom_root_fields: {}
+array_relationships:
+  - name: WantedItemTransactions
+    using:
+      foreign_key_constraint_on:
+        column: transaction_id
+        table:
+          name: WantedItemTransaction
+          schema: public
+delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+    comment: ""

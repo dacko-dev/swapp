@@ -1,0 +1,83 @@
+table:
+  name: Item
+  schema: public
+configuration:
+  column_config:
+    brand_id:
+      custom_name: brandId
+    category_id:
+      custom_name: categoryId
+    conditionId:
+      custom_name: conditionId
+    created_at:
+      custom_name: createdAt
+    image_names:
+      custom_name: imageNames
+    is_wanted_item:
+      custom_name: isWantedItem
+    main_color_id:
+      custom_name: mainColorId
+    manufactury_date_day:
+      custom_name: manufacturyDateDay
+    manufactury_date_month:
+      custom_name: manufacturyDateMonth
+    manufactury_date_year:
+      custom_name: manufacturyDateYear
+    quick_info:
+      custom_name: quickInfo
+    shipping_from_city_id:
+      custom_name: shippingFromCityId
+    shipping_from_country_id:
+      custom_name: shippingFromCountryId
+    shipping_from_state_id:
+      custom_name: shippingFromStateId
+    size_id:
+      custom_name: sizeId
+    subcategory_id:
+      custom_name: subcategoryId
+    updated_at:
+      custom_name: updatedAt
+    user_id:
+      custom_name: userId
+  custom_column_names:
+    brand_id: brandId
+    category_id: categoryId
+    conditionId: conditionId
+    created_at: createdAt
+    image_names: imageNames
+    is_wanted_item: isWantedItem
+    main_color_id: mainColorId
+    manufactury_date_day: manufacturyDateDay
+    manufactury_date_month: manufacturyDateMonth
+    manufactury_date_year: manufacturyDateYear
+    quick_info: quickInfo
+    shipping_from_city_id: shippingFromCityId
+    shipping_from_country_id: shippingFromCountryId
+    shipping_from_state_id: shippingFromStateId
+    size_id: sizeId
+    subcategory_id: subcategoryId
+    updated_at: updatedAt
+    user_id: userId
+  custom_root_fields: {}
+array_relationships:
+  - name: ItemTags
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: ItemTag
+          schema: public
+  - name: WantedItemTransactions
+    using:
+      foreign_key_constraint_on:
+        column: wanted_item_id
+        table:
+          name: WantedItemTransaction
+          schema: public
+delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+    comment: ""

@@ -1,0 +1,9 @@
+table:
+  name: Brand
+  schema: public
+select_permissions:
+  - role: user
+    permission:
+      columns: []
+      filter: {}
+    comment: ""

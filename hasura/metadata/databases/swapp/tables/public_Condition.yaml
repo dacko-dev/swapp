@@ -1,0 +1,12 @@
+table:
+  name: Condition
+  schema: public
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - description
+        - id
+        - name
+      filter: {}
+    comment: ""

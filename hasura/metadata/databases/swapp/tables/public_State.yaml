@@ -1,0 +1,16 @@
+table:
+  name: State
+  schema: public
+configuration:
+  column_config:
+    country_id:
+      custom_name: countryId
+  custom_column_names:
+    country_id: countryId
+  custom_root_fields: {}
+select_permissions:
+  - role: user
+    permission:
+      columns: []
+      filter: {}
+    comment: ""

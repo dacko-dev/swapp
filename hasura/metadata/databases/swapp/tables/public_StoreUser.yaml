@@ -1,0 +1,34 @@
+table:
+  name: StoreUser
+  schema: public
+configuration:
+  column_config:
+    created_at:
+      custom_name: createdAt
+    email_verified:
+      custom_name: emailVerified
+    first_name:
+      custom_name: firstName
+    full_name:
+      custom_name: fullName
+    has_image:
+      custom_name: hasImage
+    image_url:
+      custom_name: imageUrl
+    last_name:
+      custom_name: lastName
+    primary_email_address:
+      custom_name: primaryEmailAddress
+    updated_at:
+      custom_name: updatedAt
+  custom_column_names:
+    created_at: createdAt
+    email_verified: emailVerified
+    first_name: firstName
+    full_name: fullName
+    has_image: hasImage
+    image_url: imageUrl
+    last_name: lastName
+    primary_email_address: primaryEmailAddress
+    updated_at: updatedAt
+  custom_root_fields: {}

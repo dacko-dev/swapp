@@ -1,0 +1,19 @@
+table:
+  name: TransactionType
+  schema: public
+configuration:
+  column_config:
+    name:
+      custom_name: name
+  custom_column_names:
+    name: name
+  custom_root_fields: {}
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - id
+        - description
+        - name
+      filter: {}
+    comment: ""

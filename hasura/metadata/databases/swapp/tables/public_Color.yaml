@@ -1,0 +1,22 @@
+table:
+  name: Color
+  schema: public
+configuration:
+  column_config:
+    display_order:
+      custom_name: displayOrder
+    hex_code:
+      custom_name: hexCode
+    is_shining:
+      custom_name: isShining
+  custom_column_names:
+    display_order: displayOrder
+    hex_code: hexCode
+    is_shining: isShining
+  custom_root_fields: {}
+select_permissions:
+  - role: user
+    permission:
+      columns: []
+      filter: {}
+    comment: ""

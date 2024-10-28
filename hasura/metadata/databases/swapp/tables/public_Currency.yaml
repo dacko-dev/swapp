@@ -1,0 +1,13 @@
+table:
+  name: Currency
+  schema: public
+configuration:
+  column_config:
+    display_order:
+      custom_name: displayOrder
+    iso_code:
+      custom_name: isoCode
+  custom_column_names:
+    display_order: displayOrder
+    iso_code: isoCode
+  custom_root_fields: {}

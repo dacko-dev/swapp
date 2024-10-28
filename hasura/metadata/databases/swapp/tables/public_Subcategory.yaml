@@ -1,0 +1,27 @@
+table:
+  name: Subcategory
+  schema: public
+configuration:
+  column_config:
+    category_id:
+      custom_name: categoryId
+    parent_subcategory_id:
+      custom_name: parentSubcategoryId
+  custom_column_names:
+    category_id: categoryId
+    parent_subcategory_id: parentSubcategoryId
+  custom_root_fields: {}
+array_relationships:
+  - name: SizeSubcategories
+    using:
+      foreign_key_constraint_on:
+        column: subcategory_id
+        table:
+          name: SizeSubcategory
+          schema: public
+select_permissions:
+  - role: user
+    permission:
+      columns: []
+      filter: {}
+    comment: ""

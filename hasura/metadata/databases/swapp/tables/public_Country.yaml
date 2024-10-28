@@ -1,0 +1,22 @@
+table:
+  name: Country
+  schema: public
+configuration:
+  column_config:
+    continent_code:
+      custom_name: continentCode
+    currency_id:
+      custom_name: currencyId
+    phone_code:
+      custom_name: phoneCode
+  custom_column_names:
+    continent_code: continentCode
+    currency_id: currencyId
+    phone_code: phoneCode
+  custom_root_fields: {}
+select_permissions:
+  - role: user
+    permission:
+      columns: []
+      filter: {}
+    comment: ""
