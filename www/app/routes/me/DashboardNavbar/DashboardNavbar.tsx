@@ -1,4 +1,4 @@
-import { Group, Avatar, Text } from "@mantine/core";
+import { Group, Avatar, Text, Button, Anchor } from "@mantine/core";
 import {
   IconBellRinging,
   IconSettings,
@@ -8,15 +8,19 @@ import {
   IconUserSquareRounded,
   IconLifebuoy,
   IconMessage,
+  IconHeartFilled,
 } from "@tabler/icons-react";
 
 import classes from "./DashboardNavbar.module.css";
 import { NavLink, useLocation } from "@remix-run/react";
 import cx from "clsx";
+import React from "react";
+import { SignOutButton } from "@clerk/remix";
 
 const data = [
   { link: "/me/items", label: "My Items", icon: IconKeyframesFilled },
   { link: "/me/transactions", label: "Transactions", icon: IconTransfer },
+  { link: "/me/favourites", label: "Favourites", icon: IconHeartFilled },
   { link: "/me/messages", label: "Messages", icon: IconMessage },
   { link: "/me/notifications", label: "Notifications", icon: IconBellRinging },
   { link: "/me/account", label: "Account", icon: IconUserSquareRounded },
@@ -25,7 +29,7 @@ const data = [
 
 // IconMoodPuzzled
 
-export function DashboardNavbar() {
+function DashboardNavbar() {
   const location = useLocation();
   console.log(location.pathname);
 
@@ -67,16 +71,20 @@ export function DashboardNavbar() {
           <IconLifebuoy className={classes.linkIcon} stroke={1.5} />
           <span>Help</span>
         </a>
-
-        <a
-          href="/"
-          className={classes.link}
-          onClick={(event) => event.preventDefault()}
-        >
-          <IconLogout className={classes.linkIcon} stroke={1.5} />
-          <span>Logout</span>
-        </a>
+        <SignOutButton>
+          <Anchor
+            w="100%"
+            component="button"
+            className={classes.link}
+            onClick={(event) => event.preventDefault()}
+          >
+            <IconLogout className={classes.linkIcon} stroke={1.5} />
+            Logout
+          </Anchor>
+        </SignOutButton>
       </div>
     </nav>
   );
 }
+
+export default React.memo(DashboardNavbar);

@@ -1,6 +1,6 @@
 import { getAuth } from "@clerk/remix/ssr.server";
 import { LoaderFunction, redirect } from "@remix-run/node";
-import { LoginPage } from "~/components/Pages/LoginPage/LoginPage";
+import { LoginPage } from "~/components/pages/LoginPage/LoginPage";
 
 export const loader: LoaderFunction = async (args) => {
   const { userId } = await getAuth(args);

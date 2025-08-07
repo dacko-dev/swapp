@@ -79,6 +79,12 @@ body {
   }
 }
 
+@media (max-width: $mantine-breakpoint-sm) {
+  .flat-corners-sm {
+    border-radius: 0;
+  }
+}
+
 @layer components {
   .thin-banner {
     width: 100%;

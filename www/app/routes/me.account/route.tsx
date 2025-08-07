@@ -1,5 +1,5 @@
 import { Box, TextInput } from "@mantine/core";
-import DashboardSection from "~/components/DashboardSection/DashboardSection";
+import DashboardSection from "~/components/layout/DashboardSection/DashboardSection";
 
 export default function DashboardAccount() {
   return (

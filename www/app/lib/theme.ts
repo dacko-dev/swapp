@@ -39,12 +39,27 @@ const brightPink: MantineColorsTuple = [
   "#8c1e50",
 ];
 
+const honeyOrange: MantineColorsTuple = [
+  "#fffae6",
+  "#fff0c2",
+  "#ffe89c",
+  "#ffdf77",
+  "#ffd856",
+  "#ffcf3f",
+  "#ffcb32",
+  "#f9b72b",
+  "#e8a126",
+  "#d68a1f",
+];
+
 export const appTheme = createTheme({
   fontFamily: "Inter, sans-serif",
   primaryColor: "pale-violet",
+
   colors: {
     "pale-violet": paleViolet,
     "ocean-blue": oceanBlue,
     "bright-pink": brightPink,
+    "honey-orange": honeyOrange,
   },
 });

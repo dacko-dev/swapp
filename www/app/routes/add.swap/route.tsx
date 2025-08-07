@@ -21,9 +21,9 @@ import {
   useSubmit,
 } from "@remix-run/react";
 import { useEffect, useState } from "react";
-import { AddSwapFormStepOne } from "~/components/Forms/AddSwap/AddSwapFormStepOne";
-import { AddSwapFormStepTwo } from "~/components/Forms/AddSwap/AddSwapFormStepTwo";
-import { FormButtons } from "~/components/Forms/FormButtons/FormButtons";
+import { AddSwapFormStepOne } from "~/components/forms/AddSwap/AddSwapFormStepOne";
+import { AddSwapFormStepTwo } from "~/components/forms/AddSwap/AddSwapFormStepTwo";
+import { FormButtons } from "~/components/forms/FormButtons/FormButtons";
 
 import { AdminSdk, getServerSdkWithToken } from "~/lib/api/api.server";
 import { clerkClient } from "~/lib/clerkClient.server";
@@ -95,6 +95,7 @@ export async function action({ request, params, context }: ActionFunctionArgs) {
   }
 
   const template = "swapp";
+
   const { jwt: jwtToken } = await clerkClient.sessions.getToken(
     sessionId,
     template
@@ -657,6 +658,7 @@ export default function AddSwapPage() {
         }}
       >
         <AddSwapFormStepTwo
+          GRAPHQL_ENDPOINT={GRAPHQL_ENDPOINT}
           GEOAPIFY_API_KEY={GEOAPIFY_API_KEY}
           itemFormData={itemFormData}
           currencyData={currencyData}

@@ -1,12 +1,12 @@
 import { Box, Flex } from "@mantine/core";
 import { useEffect, useState } from "react";
-import CheckboxButton from "../../components/Buttons/CheckboxButton/CheckboxButton";
+import CheckboxButton from "../../components/ui/Buttons/CheckboxButton/CheckboxButton";
 import {
   checkIfSwapType,
   loadFromSessionStorage,
   saveToSessionStorage,
 } from "~/lib/utils";
-import FormHeader from "~/components/Forms/FormHeader/FormHeader";
+import FormHeader from "~/components/forms/FormHeader/FormHeader";
 import { TSwapType } from "~/lib/types";
 import { getAuth } from "@clerk/remix/ssr.server";
 import { LoaderFunctionArgs, redirect } from "@remix-run/node";

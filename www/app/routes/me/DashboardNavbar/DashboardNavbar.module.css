@@ -47,15 +47,16 @@
   @mixin hover {
     background-color: light-dark(
       var(--mantine-color-pale-violet-3),
-      var(--mantine-color-pale-violet-7)
+      var(--mantine-color-pale-violet-8)
     );
+    text-decoration: none;
   }
 }
 
 .link-active {
   background-color: light-dark(
     var(--mantine-color-pale-violet-2),
-    var(--mantine-color-pale-violet-6)
+    var(--mantine-color-pale-violet-9)
   );
   &,
   &:hover {

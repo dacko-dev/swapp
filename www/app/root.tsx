@@ -26,7 +26,7 @@ import "@mantine/spotlight/styles.css";
 import "@mantine/tiptap/styles.css";
 
 import { appTheme } from "./lib/theme";
-import AppLayout from "./components/Layout/AppLayout/AppLayout";
+import AppLayout from "./components/layout/AppLayout/AppLayout";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },

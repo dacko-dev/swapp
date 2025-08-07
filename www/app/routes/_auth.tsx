@@ -1,6 +1,6 @@
 import { Affix } from "@mantine/core";
 import { Outlet } from "@remix-run/react";
-import BackButton from "~/components/Buttons/BackButton/BackButton";
+import BackButton from "~/components/ui/Buttons/BackButton/BackButton";
 
 export default function AuthLayout() {
   return (

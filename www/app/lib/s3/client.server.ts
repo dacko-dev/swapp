@@ -8,7 +8,7 @@ if (!region) {
   throw new Error("S3_BUCKET_REGION_ITEM_IMAGES is not set");
 }
 if (!accessKeyId) {
-  throw new Error("AWS_USER_ACCESS_KEYis not set");
+  throw new Error("AWS_USER_ACCESS_KEY is not set");
 }
 if (!secretAccessKey) {
   throw new Error("AWS_USER_SECRET_ACCESS_KEY is not set");
